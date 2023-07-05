@@ -3,7 +3,7 @@
 #include <conio.h>
 #include <stdlib.h>
 
-struct contato{ //teste
+struct contato{ 
 	char nome [51];
 	char telefone[18];
 
