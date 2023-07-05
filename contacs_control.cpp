@@ -3,7 +3,7 @@
 #include <conio.h>
 #include <stdlib.h>
 
-struct contato{
+struct contato{ //teste
 	char nome [51];
 	char telefone[18];
 
@@ -17,7 +17,7 @@ void limpar(void){
 	system("cls");
 }
 void abrir(){
-	FILE *file = fopen(FILE_NAME,"r");//r pq n„o quero escrever no arquivo
+	FILE *file = fopen(FILE_NAME,"r");//r pq n√£o quero escrever no arquivo
 	
 	if(!file == NULL){
 		contador = 0;
@@ -46,7 +46,7 @@ bool novoFile(int ignore){
 	contato tempo[LIMIT];//tive que criar outro pois nao estava salvado quando excluia 
 	int n = 0;
 	
-	remove(FILE_NAME); //romovo e crio outra pasta para salvar altereÁ„o
+	remove(FILE_NAME); //romovo e crio outra pasta para salvar altere√ß√£o
 	FILE *file = fopen(FILE_NAME, "a+");
 	
 	
@@ -104,7 +104,7 @@ void criarCont(){
 		printf("SEM ESPACO NA MEMORIA!!\n\n");
 	}
 }
-void editarCont(int i){//i È o contato selecionado
+void editarCont(int i){//i √© o contato selecionado
 	 contato ctt;
 	
 	printf("\nEDITAR CONTATO\n");
@@ -129,7 +129,7 @@ void editarCont(int i){//i È o contato selecionado
 	}
 }
 
-bool confirmar(char *menssagem){// * na string pq tem que ter referencia se n„o sempre vai dar erro
+bool confirmar(char *menssagem){// * na string pq tem que ter referencia se n√£o sempre vai dar erro
 	char r;
 	
 	printf("%s  S para Sim ou N para NAO : ", menssagem );
@@ -228,7 +228,7 @@ void buscarContatos(){
 	int limit = strlen(nome); //strlen le e mede o tamanho do string
 	limit -=1;// diminuindo 1 por conta da quebra de linha
 	printf("Resultado: \n\n");
-	for(int i=0; i<contador; i++){ // percorrer o array verificando se È igual.
+	for(int i=0; i<contador; i++){ // percorrer o array verificando se √© igual.
 		if(strlen(contatos[i].nome) >= limit){
 			if (matchContatos(nome, contatos[i].nome, 0, limit)){
 				contatosExibir(i);
